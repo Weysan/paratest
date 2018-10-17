@@ -65,6 +65,10 @@ class CoverageMerger
                 $extra = 'Xdebug is disabled! Enable for coverage.';
             }
 
+            if ($err = fgets(STDERR)) {
+                $extra = $err;
+            }
+
             throw new \RuntimeException(
                 "Coverage file {$file->getRealPath()} is empty. " . $extra
             );
