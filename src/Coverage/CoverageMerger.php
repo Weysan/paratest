@@ -83,10 +83,13 @@ class CoverageMerger
     /**
      * Get coverage report generator.
      *
-     * @return CoverageReporterInterface
+     * @return CoverageReporterInterface|false
      */
     public function getReporter(): CoverageReporterInterface
     {
-        return new CoverageReporter($this->coverage);
+        if ($this->coverage) {
+            return new CoverageReporter($this->coverage);
+        }
+        return false;
     }
 }
