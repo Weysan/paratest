@@ -22,7 +22,7 @@ class CoverageReporter implements CoverageReporterInterface
     /**
      * @param CodeCoverage $coverage
      */
-    public function __construct(CodeCoverage $coverage)
+    public function __construct(CodeCoverage $coverage = null)
     {
         $this->coverage = $coverage;
     }

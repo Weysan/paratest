@@ -87,9 +87,6 @@ class CoverageMerger
      */
     public function getReporter(): CoverageReporterInterface
     {
-        if ($this->coverage) {
-            return new CoverageReporter($this->coverage);
-        }
-        return false;
+        return new CoverageReporter($this->coverage);
     }
 }
