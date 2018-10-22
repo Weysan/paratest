@@ -72,6 +72,7 @@ class CoverageMerger
 //            throw new \RuntimeException(
 //                "Coverage file {$file->getRealPath()} is empty. " . $extra
 //            );
+            $this->addCoverage($this->getCoverageObject($file));
             return;
         }
 
